@@ -19,7 +19,7 @@ public class Start {
              * @param user is the MySQL developer user
              * @param password is the password used for MySQL developer account
              */
-            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/newdb", "developer", "**********");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/newdb", "developer", "developerpass1");
 
             /** Creating a new 'conn' statement using Statement */
             Statement statement = conn.createStatement();
@@ -44,13 +44,9 @@ public class Start {
             /** Executing the command */
             statement.executeUpdate(insertStudents);
 
-        } catch (SQLException e) {
-            System.out.println(e.getMessage());
+        } catch (SQLException e) {System.out.println(e.getMessage());
         } finally {
-            try {
-                if (conn != null) {
-                    conn.close();
-                }
+            try { if (conn != null) {conn.close();}
             } catch (SQLException e2) {
                 System.out.println(e2.getMessage());
             }
