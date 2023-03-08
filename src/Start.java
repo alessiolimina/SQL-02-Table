@@ -12,7 +12,7 @@ public class Start {
         Connection conn = null;
 
         try {
-            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/newdb", "developer", "developerpass1");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/newdb", "developer", "**********");
             Statement statement = conn.createStatement();
             String createTable = "CREATE TABLE IF NOT EXISTS students (student_id INT (10) NOT NULL AUTO_INCREMENT, last_name VARCHAR (30), first_name VARCHAR (30), CONSTRAINT students_pk PRIMARY KEY (student_id));";
             statement.executeUpdate(createTable);
