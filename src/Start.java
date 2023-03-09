@@ -19,7 +19,7 @@ public class Start {
              * @param user is the MySQL developer user
              * @param password is the password used for MySQL developer account
              */
-            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/newdb", "developer", "developerpass1");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/newdb", "developer", "*******");
 
             /** Creating a new 'conn' statement using Statement */
             Statement statement = conn.createStatement();
