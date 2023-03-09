@@ -33,7 +33,7 @@ public class Start {
              */
             String createTable = "CREATE TABLE IF NOT EXISTS students (student_id INT (10) NOT NULL AUTO_INCREMENT, last_name VARCHAR (30), first_name VARCHAR (30), CONSTRAINT students_pk PRIMARY KEY (student_id));";
 
-            /** Executing the table creation */
+            /** Executing the statement */
             statement.executeUpdate(createTable);
 
             /** Inserting 4 new students in the previous table 'students', using the String 'insertStudents'
@@ -41,7 +41,7 @@ public class Start {
              */
             String insertStudents = "INSERT INTO students (last_name, first_name) VALUES ('Limina','Alessio'), ('Torelli', 'Alberto'), ('Siniscalco', 'Giorgio'), ('Federico', 'Sacchi');";
 
-            /** Executing the command */
+            /** Executing the statement */
             statement.executeUpdate(insertStudents);
 
         } catch (SQLException e) {System.out.println(e.getMessage());
